@@ -1,0 +1,6 @@
+# Runtime. `pip install -r requirements.txt`
+google-api-python-client>=2.100
+google-auth-httplib2>=0.2
+google-auth-oauthlib>=1.2
+openpyxl>=3.1          # applications.xlsx (optional: the CSV sheet works without it)
+dnspython>=2.4         # mail-server (MX) checks; falls back to nslookup without it

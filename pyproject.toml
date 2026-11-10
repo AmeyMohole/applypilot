@@ -1,0 +1,32 @@
+[project]
+name = "jobscan"
+version = "2.0.0"
+description = "Job-search pipeline: find cloud / devops / full-stack leads, draft tailored Gmail applications, follow up, and track everything."
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+extend-exclude = ["jobscan/data", "jobscan/secrets"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "B", "UP", "SIM"]
+ignore = [
+    "E501",    # long lines: wrapped by hand where it helps; the formatter is not enforced
+    "SIM108",  # ternaries are not always clearer
+    "B905",    # zip() without strict=
+    "B007",    # unused loop variable: unpacking (key, record) reads better than indexing
+    "SIM105",  # try/except/pass is clearer than contextlib.suppress for a one-line best-effort step
+    "SIM102",
+    "SIM114",
+    "SIM905",  # the board lists are whitespace-separated on purpose: easy to edit and diff
+]
+
+[tool.ruff.lint.per-file-ignores]
+# Each script puts jobscan/core on sys.path before importing it, so imports follow code.
+"jobscan/**/*.py" = ["E402"]
+"tests/**/*.py" = ["E402", "E731", "B011"]

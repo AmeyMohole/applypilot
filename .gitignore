@@ -1,0 +1,43 @@
+# --- Secrets & credentials ---
+jobscan/credentials.json
+jobscan/token.json
+jobscan/secrets/
+.env
+.env.*
+*.pem
+*.key
+
+# --- Personal / runtime data (never commit) ---
+jobscan/data/
+jobscan/leads.json
+jobscan/captures/
+jobscan/followup.log
+jobscan/AUTO_OFF
+applications.csv
+applications.xlsx
+summary.csv
+*.pdf
+*.log
+*.tmp
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+build/
+dist/
+
+# --- Tool caches ---
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# --- Editor / OS ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

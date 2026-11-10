@@ -1,0 +1,2 @@
+# Only for 1-find/jobspy_search.py (the PyPI release lags the repo, so install from GitHub):
+#   pip install https://github.com/speedyapply/JobSpy/archive/refs/heads/main.zip
